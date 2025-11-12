@@ -1,0 +1,180 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelvin BioGeo Learning</title>
+  <style>
+     *{box-sizing:border-box;
+    }
+    body {font-family:Inter,ui-sans-serif,system-ui,
+        -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+        line-height:1.5;
+        margin:0;
+        color:#111
+    }
+    header {background:linear-gradient(90deg,#06283d 0%, 
+        rgba(8,145,178,0.9)
+       100%);
+       color:#fff;
+       padding:18px}
+           
+       .container
+    {max-width:980px;
+        margin:0 auto;
+        padding:20px
+    }
+        nav {display:flex;
+            gap:12px;
+            align-items:center
+        }
+        .mechanism { color: #111;
+           font-weight: bold;
+
+        }
+         .card{background:#fff;
+        border-radius:12px;
+        padding:16px;
+        box-shadow:0 6px 18px rgba(10,10,10,0.06);
+         align-items:stretch;
+
+        
+         
+        
+    }
+      h1 { margin:0 0 8px;
+        font-size:26px;
+    }
+    img{
+        width: 250px;
+       
+    }
+    .grid {display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr ));
+        gap:14px;margin-top:18px;
+        align-items:stretch;
+    }
+     .menubtn{
+        background-color: #06283d;
+        text-decoration: none;
+        display: flex;
+        cursor: pointer;
+       
+      
+      }
+      .menubar {
+        display: none;
+        flex-direction: column;
+        color: white;
+        padding: 10px;
+      
+        
+       
+      }
+     a {
+        text-decoration: none;
+        direction: left;
+       
+    }
+  
+    </style>
+    <body>
+    <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Kelvin BioGeo Learning</div>
+        <div class="small">Form 1–4 | Geography & Biology</div>
+        <div class="mechanism">Simple Mechanism</div>
+      </nav>
+    </div>
+    <button id="menubtn" class="menubtn">≡≡</button>
+       <div id="menubar" class="menubar">
+        <li class="resource"><span lang-content="en" class="active">
+           <a href="" style="color: white;border-bottom:2px solid#06283d; ">Home page</a></span>
+         <li class="resource"><span lang-content="en" class="active"><a href="" style="color: white;
+          border-bottom:2px solid#06283d; ">
+          About Kelvin BioGeo Learning
+         </a></spa>
+          <li class="resource"><span lang-content="en" class="active"><a href="#contact" style="color: white;
+           border-bottom:2px solid#06283d; ">
+           Contact us
+          </a></spa>
+              <li class="resource"><span lang-content="en" class="active"><a href="" style="color: white; 
+               border-bottom:2px solid#06283d;">
+                Other Services
+              </a></span>
+       
+       </div>
+  </header> 
+     <main class="container">
+         <h1>Learning Simple Biology Mechanism</h1>
+      <div class="card">
+           <h2 style="color: blue;"> Qn Mchanism of Blood DNA replication</h2>
+    
+           <div class="card">
+          <img src="heart.PNG">
+         <p><b>DNA REPLICATION</b><p>
+     <u>DNA replication</u> is a process whereby the exact copies of 
+     DNA (replicable) are produced by the old DNA molecules.            
+      <p><b>Significance of DNA replication:</b></p>
+   <li>Since it occurs prior to the nuclear division, DNA replication ensures that all newly formed cells have the same amount of DNA.</li>
+   <li>It ensures sameness and constancy of hereditary materials of the cells.</li>
+   <li>Occasional mistakes during DNA replication, results into genetic variations hence evolution.</li> 
+    </p>
+    <p><b>Mechanism of DNA replication:</b></p>
+    DNA Replication  It involve Three Phases that include
+    <ol>
+        <li>Unwinding of DNA Molecule</li>
+        <li>Adition of Free Neuclotide</li>
+        <li>Sealing the gapes</li>
+    </ol>
+    <ul>
+        <li><centre>Unwinding of DNA Molecule</centre></li>
+    </ul>
+    The Unwinding of DNA molecule is controlled by the enzyme <b>Helicase.</b>
+    This is achieved by breaking down The hydrogen bond between complementary base
+    pair of DNA forming replication Folk. Helicase enzyme move along the DNA molecule
+    from 5⋙⋙3.
+
+     <div class="card"><p><img src="lung.png" style="object-position: center;"></p></div>
+        <ul>
+        <li><centre>Addition of Free Nucleotide</centre></li>
+    </ul>
+    The addition of free nucleotide is accompleshed by the enzyme <b>DNA polymarase.</b>
+         
+         The <b>DNA polymarase.</b> adds free nucleotide to 
+         open structure of DNA Starting from 5'----⋙3' flex-direction.
+         For this case only one strand can be copied continously. Because DNA polymarase
+            as unwinding enzyme. </p>
+             <div class="card"><p><img src="lung.png" style="object-position: center;"></p></div>
+      </div>
+          <ul>
+        <li><centre>Unwinding of DNA Molecule</centre></li>
+    </ul>
+     This is the last phase which is controlled by <b>Ligase enzyme</b>
+     The DNA ligase seal the gaps left by Enzyme DNA polymarase
+      in a discontinous strand thus new strands.
+      <div class="card"><p><img src="lung.png" style="object-position: center;"></p>
+         <p style="color: blue;">This is the simple explanation of DNA replication</p>
+    </div>
+     
+     </main>
+     <script>
+         const btn =
+        document.getElementById("menubtn");
+        const menu = document.getElementById("menubar");
+        btn.addEventListener("click",  () => {
+          if (menu.style.display === "flex")
+          {menu.style.display = "none";
+
+          }
+          else {menu.style.display = "flex";}
+
+          
+        } );
+        
+     </script>
+    </body>
+</head>
+</html>
