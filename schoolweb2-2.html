@@ -1,0 +1,638 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelvin BioGeo Learning</title>
+  <style>
+     *{box-sizing:border-box;
+    }
+    body {font-family:Inter,ui-sans-serif,system-ui,
+        -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+        line-height:1.5;
+        margin:0;
+        color:#111
+    }
+       .container
+    {max-width:980px;
+        margin:0 auto;
+        padding:20px
+    }
+
+     header {background:linear-gradient(90deg,#06283d 0%, 
+        rgba(8,145,178,0.9)
+       100%);
+       color:#fff;
+       padding:18px}
+
+         nav {display:flex;
+            gap:12px;
+            align-items:center
+        }
+        /*my name brand*/
+    .brand{font-weight:700;
+        font-size:20px
+    }
+    .small{
+        font-size:13px;
+        color:var(--muted)
+    }
+    .lang-toggle{margin-left:auto;
+      display:flex;
+      gap:8px;
+      cursor: pointer;
+    }
+      p.lead{color:var(--muted);margin:0}
+
+      .hero {display:grid;
+        grid-template-columns:  1fr;
+        gap:18px;
+        
+    }
+         @media(min-width:760px){.hero{grid-template-columns: 1fr  340px}}
+
+    .card{background:#fff;
+        border-radius:12px;
+        padding:16px;
+        box-shadow:0 6px 18px rgba(10,10,10,0.06);
+         align-items:stretch;
+
+         max-width: auto;
+         
+        
+        
+    }
+    p.lead{color:var(--muted);margin:0}
+
+     ul.resources{list-style:none;
+        padding:0;
+        margin:0;
+        display:flex;
+        flex-direction:column;
+        gap:8px
+    }
+    .resource {display:flex;
+        justify-content:space-between
+        ;align-items:center;
+        text-decoration: none;
+    }
+    a {text-decoration: none;
+        
+
+    }
+     h1 {margin:0 0 8px;font-size:26px}
+      a.cta{display:inline-block;
+        background:var(--accent);color:#fff;
+        padding:10px 14px;
+        border-radius:8px;
+        text-decoration:none;
+    }
+     .grid {display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr ));
+        gap:14px;margin-top:18px;
+        align-items:stretch;
+    }
+     [lang-content]{display:none}
+    [lang-content].active{display:block}
+
+         /*footer 1*/
+    .card2{
+       
+        background-color: #06283d;
+        padding:16px;
+        box-shadow:0 6px 18px rgba(10,10,10,0.06);
+        color: rgba(0, 0, 0, 0.034);
+        text-align: center;
+        padding-bottom: 5%;
+        
+
+    }
+     a.notes{display:inline-block;
+        background-color: #111;
+       color:white;
+        padding:10px 14px;border-radius:8px;text-decoration:none;}
+
+        button {
+             background-color: #ffb400;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 2px;
+            color: white;
+            animation: bounce ease 1s infinite;
+        }
+        .btn{ background:linear-gradient(90deg,#06283d 0%, 
+        rgba(8,145,178,0.9)
+       100%);
+                      }
+        @keyframes bounce {
+         0%,100%{transform: scale(1);}
+        50%{transform: scale(1.1);}
+        }
+        button :active{
+            animation: shake ease 1s;
+          
+                
+            
+        }
+         @keyframes active {
+         0%,100%{transform: translatex(0px);}
+        50%{transform: translatex(100px);}
+        }
+        img {
+          width: 300px;
+          border-radius: 12px;
+         ;
+          animation:slider ease 1s infinite;
+        }
+         pre {background:#0f1724;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto}
+          p.lead{color:var(--muted);margin:0}
+         
+        /*css table has ni]o mateer*/
+            table,th,td {
+                
+                border: 1px solid rgba(0, 0, 0, 0.856);
+              
+                 width: auto;
+                text-align: left;
+                 object-position: center;
+                 justify-content: center;
+                 font-size: 12px;
+                };
+            th,td, tr{
+                padding: 8px;
+            
+                
+            }  
+            th {
+              color: blue;
+              font-weight: normal;
+              text-align: center;
+              
+            }
+          
+           /*foote-----------2r*/
+           footer {
+            background-color: #06283d;
+            color: white;
+           }
+
+     
+
+
+
+     /*kelvin Bio*/
+     video {
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 100px;
+     }
+     iframe {
+      width: 230px;
+      border-radius: 10px;
+      cursor: pointer;
+     }
+     iframe:hover {
+      animation: shine ease 1s;
+      cursor: pointer;
+     }
+     @keyframes shine {
+         0%,100%{transform: scale(1);}
+        50%{transform: scale(1.1);}
+        }
+      table:hover { 
+       animation: shine ease 1s;
+      }
+      .menubtn{
+        background-color: #06283d;
+        text-decoration: none;
+        display: flex;
+       
+      
+      }
+      .menubar {
+        display: none;
+        flex-direction: column;
+        color: white;
+        padding: 10px;
+      
+        
+       
+      }
+      .pump {
+        animation: pump ease-in-out 0.3s infinite;
+      }
+     
+     @keyframes pump {
+      0%,100%{transform: scale(1);}
+      30%{transform: scale(1.01);}
+      60%{transform: scale(1.02);}
+       90%{transform: scale(1.03);}
+     }
+    
+    
+        
+    
+   
+    </style>
+</head>
+    <body>
+         <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Kelvin BioGeo Learning</div>
+        <div class="small">Form 1–4 | Geography & Biology</div>
+        <div class="lang-toggle">
+          <button class="btn" onclick="setLang('en')">English</button>
+          <button class="btn" onclick="setLang('sw')">Kiswahili</button>
+        </div>
+      </nav>
+    </div>
+      <button id="menubtn" class="menubtn">≡≡</button>
+       <div id="menubar" class="menubar">
+        <li class="resource"><span lang-content="en" class="active">
+           <a href="" style="color: white;border-bottom:2px solid#06283d; ">Home page</a></span>
+         <li class="resource"><span lang-content="en" class="active"><a href="" style="color: white;
+          border-bottom:2px solid#06283d; ">
+          About Kelvin BioGeo Learning
+         </a></spa>
+          <li class="resource"><span lang-content="en" class="active"><a href="#contact" style="color: white;
+           border-bottom:2px solid#06283d; ">
+           Contact us
+          </a></spa>
+              <li class="resource"><span lang-content="en" class="active"><a href="" style="color: white; 
+               border-bottom:2px solid#06283d;">
+                Other Services
+              </a></spa>
+        <li class="resource"><span lang-content="sw"> <a href="" style="color: white;  border-bottom:2px solid#06283d;">
+            Nyumbani
+        </a></span>
+          <li class="resource"><span lang-content="sw"> <a href="" style="color: white; border-bottom:2px solid#06283d;
+          border-bottom:2px solid#06283d;">
+            Kuhusu Kelvin BioGeo Learning
+          </a></span>
+            <li class="resource"><span lang-content="sw"> <a href="" style="color: white; border-bottom:2px solid#06283d; ">
+            Huduma nyingine
+            </a></span>
+            <li class="resource"><span lang-content="sw"> <a href="" style="color: white; border-bottom:2px solid#06283d; ">
+            Mawasiliano
+            </a></span>
+       </div>
+  </header> 
+    <main class="container">
+    <section class="hero">
+      <div class="card" style="width: 100%;">
+        <div lang-content="en" class="active">
+          <h1>Learn Geography & Biology — Clear, Simple, Practical</h1>
+          <p class="lead">Free notes, past papers,
+            which include
+            <ul>
+                <li>Pre-mock examination papers form 1-4|</li>
+                <li>Mock examination papers form 1-4|</li>
+                 <li>Pre-necta past papers 1-4|</li>
+                  <li>Necta past papers 1-4|</li>
+                   
+            </ul> 
+            Also short video lessons to help secondary students succeed. Created by Kelvin — teacher-in-training (BSc Ed: Geography & Biology).</p>
+          <p style="margin-top:12px"><a class="notes" href="#notes">Start Learning</a></p>
+        </div>
+         
+        <div lang-content="sw">
+          <h1>Jifunze Jiografia & Baiolojia — Rahisi, Wazi, na Kivitendo</h1>
+          <p class="lead">Notes za bure, maswali ya zamani,
+            Pamoja na <ul>
+                 <li>Pre-mock examination papers form 1-4|</li>
+                <li>Mock examination papers form 1-4|</li>
+                 <li>Pre-necta past papers 1-4|</li>
+                  <li>Necta past papers 1-4|</li>
+            </ul>
+            napia video fupi za kujifunzia kwa wanafunzi wa sekondari. Imetengenezwa na Kelvin — mwanafunzi wa elimu (BSc Ed).</p>
+          <p style="margin-top:12px"><a class="cta" href="buttobs.html">Anza Sasa</a></p>
+        </div><div style="margin-top:14px" class="small">Tip: Use the language buttons at top to switch between English and Kiswahili.</div>
+  </div>
+    <aside>
+    <div class="card">
+      <h3 lang-content="en" class="active">Quick ads Mechanism</h3>
+      <h3 lang-content="sw">matangazo ya Haraka</h3>
+      <div class="pump">
+      <div id="slider">
+            <figure>
+                  <a href="bioGeomechanism.html"><img src="heart.PNG" style="display: block; width: 250px;"></a>
+            </figure>
+      </div>
+      </ul>
+    </div>
+    <li><b>Learner's</b> enjoying Learning Biology The flow of blood in the heart and Other body
+      Mechanism with clear Animation
+    <b>click image to view</b></li>
+    </div>  
+  </aside>
+</section>
+
+<section id="notes" style="margin-top:18px">
+  <div class="card">
+    <h2 lang-content="en" class="active">Biology notes</h2>
+    <h2 lang-content="sw">Biology notes</h2>
+    <p class="small" lang-content="en" class="active">Download clear, exam-focused notes by topic.</p>
+    <p class="small" lang-content="sw">Pakua notes za mtihani, kwa mada.</p>
+
+    <div class="grid" style="margin-top:12px">
+      <div class="card" class="shine">
+        <h4 lang-content="en" class="active">Biology — Form One</h4>
+        <h4 lang-content="sw">Biology — Kidato cha kwanza</h4>
+        <p class="small">Notes + diagrams (PDF)</p>
+       <button style="margin-top:8px"><a href="#" class="small">ↆDownload PDF</a></button>
+      </div>
+      <div class="card">
+        <h4 lang-content="en">Biology — Form Two</h4>
+        <h4 lang-content="sw">Biology — Kidato cha pili</h4>
+        <p class="small">Notes + diagrams (PDF)</p>
+        <button style="margin-top:8px"><a href="#" class="small">ↆDownload PDF</a></button>
+      </div>
+      <div class="card">
+        <h4 lang-content="en">Biology — Form Three</h4>
+        <h4 lang-content="sw">Biology — Kidato cha tatu</h4>
+        <p class="small">Examination (PDF) </p>
+         <button style="margin-top:8px"><a href="FORM THREE MID TERM TEST.pdf" dawnload class="small">
+            ↆDownload PDF</a></button>
+         
+      
+      </div>
+      <div class="card">
+        <h4 lang-content="en">Biology — Mock exams with marking scheme</h4>
+        <h4 lang-content="sw">Biology — mtihani wa moko</h4>
+        <p class="small"> Examination (PDF) </p>
+         <button style="margin-top:8px"><a href="biology 1and 2 question-with marking scheme.pdf" class="small">
+            ↆDownload PDF</a></button>
+      </div>
+      <div class="card">
+        <h4 lang-content="en">Biology — Form Five</h4>
+        <h4 lang-content="sw">Biology — kidato cha Sita</h4>
+        <p class="small"> Notes + diagrams (PDF) </p>
+         <button style="margin-top:8px"><a href="Biology FORM 5.pdf" dawnload class="small">
+            ↆDownload PDF</a></button>
+      </div>
+      <div class="card">
+        <h4 lang-content="en">Biology — Form Six</h4>
+        <h4 lang-content="sw">Biology —  Kidato cha Sita</h4>
+        <p class="small">Short Notes + diagrams (PDF) </p>
+          <button style="margin-top:8px"><a href="Biology form 6 new.pdf" dawnload class="small">
+            ↆDownload PDF</a></button>
+      </div>
+        
+      </div>
+  </div>
+</section>
+
+<section id="notes" style="margin-top:18px">
+  <div class="card">
+    <h2 lang-content="en" class="active">Chemistry notes, past papers and bank of questions</h2>
+    <h2 lang-content="sw">Biology notes</h2>
+    <p class="small" lang-content="en" class="active">Download clear, exam-focused notes by topic.</p>
+    <p class="small" lang-content="sw">Pakua notes za mtihani, kwa mada.</p>
+
+    <div class="grid" style="margin-top:12px">
+      <div class="card">
+        <h4 lang-content="en" class="active">Chemistry — Form One</h4>
+        <h4 lang-content="sw">Chemistry — Kidato cha kwanza</h4>
+        <p class="small">Notes + diagrams (PDF)</p>
+       <button style="margin-top:8px"><a href="#" class="small">ↆDownload PDF</a></button>
+      </div>
+
+      
+      <div class="card">
+        <h4 lang-content="en" class="active">Chemistry — Form Two NECTA Exams</h4>
+        <h4 lang-content="sw">Chemistry — Kidato cha pili mitihani ya Taifa</h4>
+        <p class="small">Necta Exams (PDF)</p>
+       <button style="margin-top:8px"><a href="#" class="small">ↆDownload PDF</a></button>
+      </div>
+
+       
+      <div class="card">
+        <h4 lang-content="en" class="active">Chemistry — Form Four NECTA Exams</h4>
+        <h4 lang-content="sw">Chemistry — Kidato cha nne mitihani ya Taifa</h4>
+        <p class="small">Necta Exams (PDF)</p>
+       <button style="margin-top:8px"><a href="#" class="small">ↆDownload PDF</a></button>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<section id="notes" style="margin-top:18px">
+    <div class="card">
+     <h2 lang-content="en" class="active">Teachers zone danload scheme of works and lesson plan</h2>
+     <h2 lang-content="sw">Material ya walimu pakua maandalio ya masomo pamoj na azimio la kazi</h2>
+     <p class="small" lang-content="en" class="active">Download clear, lesson plan and schem notes by topic.</p>
+     <p class="small" lang-content="sw">Pakua notes za mtihani, kwa mada.</p>
+  
+  <div class="grid">
+   <div class="card">
+    <p>Biology subject</p>
+     <table style="background-color: beige;">
+          <th>Material and level</th>
+          <th></th>
+          <tr>
+            <td>Biology F1 lesson plan 2025</td>
+              <td><a href="Biology form 6 new.pdf" download>Dawnload</a></td>
+          </tr>
+           <tr>
+            <td >Biology F2 lesson plan 2025</td>
+              <td><a href="" download="" download>Dawnload</a></td>
+          </tr>
+           <tr>
+            <td>Biology F3 lesson plan 2025</td>
+              <td><a href="" download="" download>Dawnload</a></td>
+          </tr>
+           <tr>
+            <td>Biology F4 lesson plan 2025</td>
+              <td><a href="" download="" download>Dawnload</a></td>
+          </tr>
+        </table>
+   </div>
+   <div class="card">
+    <p>chemistry subject</p>
+     <table style="background-color: beige;">
+          <th>Material and level</th>
+          <th></th>
+          <tr>
+            <td>Chemistry F1 lesson plan 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+           <tr>
+            <td >Chemistry F2 lesson plan 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+           <tr>
+            <td>chemistry F3 lesson plan 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+           <tr>
+            <td>chemistry F4 lesson plan 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+        </table>
+     
+   </div>
+    <div class="card">
+    <p>Geography</p>
+     <table style="background-color: beige;">
+          <th>Material and level</th>
+          <th></th>
+          <tr>
+            <td>Geography F1 lesson plan 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+           <tr>
+            <td >geography F2 lesson plan 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+           <tr>
+            <td>geographyy F3 lesson plan 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+           <tr>
+            <td>Geography F4 lesson plan 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+        </table>
+     </div>
+      <div class="card">
+        <p>Scheme of work available for F4</p>
+     <table style="background-color: beige;">
+          <th>Material and level</th>
+          <th></th>
+          <tr>
+            <td>biology F4 Scheme of work 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+           <tr>
+            <td >Chemistry F4 scheme of work 2025</td>
+              <td><a href="">Dawnload</a></td>
+          </tr>
+          
+           <tr>
+            <td>Geography F4 Scheme of work 2025</td>
+              <td><a href="">Dawnload</a></td> 
+             
+          </tr>
+          
+           
+        </table>
+      </div>
+  
+
+
+    </div>
+  </div>
+</section>
+ 
+</section>  
+<section id="videos" style="margin-top:18px">
+  <div class="card">
+    <h2 lang-content="en" class="active">short video lessons to help secondary students</h2>
+    <h2 lang-content="sw">video fupi za kujifunzia kwa wanafunzi wa sekondari.</h2>
+
+   <div class="grid">
+   <div class="card">
+   <p>Blood flow Tutorial (O Level)</p>
+    <iframe  height="250" 
+       src="https://youtu.be/Wof5oDV-OYc?si=t-ql9aPdF6Fcuc9i" 
+       frameborder="0" allowfullscreen></iframe>
+   </div>
+    <div class="card">
+   <p>Genetics Tutorial (O Level) </p>
+   <iframe  height="250" 
+       src="https://youtu.be/Mu2bJgEZtwE?si=Isg1NbQglE_o7icf
+" 
+       frameborder="0" allowfullscreen></iframe>
+   </div>
+    <div class="card">
+   <p>Mechanism of hearingTutorial </p>
+   <iframe  height="250" 
+       src="https://youtu.be/zxu-UAxnIP0?si=6ODpq2sVidN8hrQx
+" 
+       frameborder="0" allowfullscreen></iframe>
+   </div>
+     <div class="card">
+   <p>Mechanism of EyeTutorial </p>
+   <iframe  height="250" 
+       src="https://youtu.be/D-kVWke0CD0?si=5z8Nin8g03sn5xjl" 
+       frameborder="0" allowfullscreen></iframe>
+   </div>
+   </div>
+  </div>
+</section>
+    </main>
+
+
+  <section id="contact" style="margin-top: 18px;">
+    <div class="card2">
+      <h4 style="color: white;">Other Educational Stakeholders </h4>
+      <a href="" style="text-decoration: none; color: white;">National Examination council of Tanzania<b>(NECTA)</b> </a></p>
+       <a href="" style="text-decoration: none; color: white;">Tanzania Institute of Education<b>(TIE)</b> </a></p>
+        <a href="" style="text-decoration: none; color: white;">Maktaba tetea </a></p>
+        <a href="" style="text-decoration: none; color: white;">Msomi bora </a>
+        <a href="" style="text-decoration: none; color: white;">NECTA</a>
+     
+      <p lang-content="en"class="active" style="color: white;">Please contact us if there is technical problem</p>
+      <p lang-content="sw">wasiliana nasi kama kuna tatizo la kiufundi</p> |
+      <a href="tel:+255658201778" style="color: white;"> <centre>+255658201778 sr..</centre></a> | <br>
+      <a href="tel:+255748279965" style="color: white;">+255748279965 sr...</a> | <br>
+      <a href="tel:+255787457993" style="color: white;"> web.💬Developer +255787457993</a> | <br>
+     
+      <hr>
+      <footer>
+          <p>&copy; <span id="currentYear"></span>All right reserved</p>
+             <p><centre>designed by calvin kasubili .Web developer</centre></p>   
+      </footer>
+      
+    </div>
+  </section>
+         </div>
+     </section>
+  
+  
+  <script>
+              document.getElementById("year").textContent = new Date().getFullYear();
+                 function setLang(code){
+      // hide all
+      document.querySelectorAll('[lang-content]').forEach(el=>el.classList.
+      remove('active'));
+      // show chosen
+      document.querySelectorAll('[lang-content="'+code+'"], [lang-content="'+code+'"].active').forEach(el=>el.classList.add('active'));
+      // convenience: set english active default for nav labels
+      if(code==='en'){
+        document.documentElement.lang='en'
+      } else { document.documentElement.lang='sw' }
+    }
+    // default english
+    setLang('en');
+      //for menubar//
+  
+   </script>
+   <script>
+       const btn =
+        document.getElementById("menubtn");
+        const menu = document.getElementById("menubar");
+        btn.addEventListener("click",  () => {
+          if (menu.style.display === "flex")
+          {menu.style.display = "none";
+
+          }
+          else {menu.style.display = "flex";}
+
+          
+        } );
+        document.getElementById("currentyear").textContent = new Date().getFullYear()
+   </script>
+          
+</body>
+</html>
+
+
+        
+
+ 
+     
