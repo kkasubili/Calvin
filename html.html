@@ -1,0 +1,673 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelvin BioGeo Learning</title>
+  <style>
+    :root{--accent:#1e90ff;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.5;margin:0;color:#111}
+    header{background:linear-gradient(90deg,#06283d 0%, rgba(8,145,178,0.9)
+       100%);color:#fff;padding:18px}
+
+    .container
+    {max-width:980px;margin:0 auto;padding:20px}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .brand{font-weight:700;font-size:20px}
+
+    .lang-toggle{margin-left:auto;
+      display:flex;
+      gap:8px}
+
+    .btn{color:#fff;background-color:#06283d;padding:8px 12px;font-weight:600;cursor:pointer;border:none}
+    main{padding:28px 0}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+    .card{background:#fff;
+      border-radius:12px;
+      padding:20px;
+      box-shadow:0 6px 18px rgba(10,10,10,0.06);
+      align-items: stretch;
+      transition: transform 0.2s;
+    
+      
+   
+    }
+    .card :hover{
+      transform: scale(1.05);
+    }
+    
+    h1{margin:0 0 8px;font-size:26px}
+    p.lead{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+    a.cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
+    footer{border-top:1px solid #e6e6e6;padding:20px 0;margin-top:28px;color:var(--muted)}
+    ul.resources{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .resource{display:flex;justify-content:space-between;align-items:center}
+
+    .small{font-size:13px;color:var(--muted)}
+    /* simple responsive */
+
+    @media(min-width:760px){.hero{grid-template-columns:1fr 340px}}
+    /* language utility */
+    [lang-content]{display:none}
+    [lang-content].active{display:block}
+    /* code block */
+    pre{background:#0f1724;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto}
+      .pump {
+        animation: pump ease-in-out 0.3s infinite;
+      }
+    
+     @keyframes pump {
+      0%,100%{transform: scale(1);}
+      30%{transform: scale(1.01);}
+      60%{transform: scale(1.02);}
+       90%{transform: scale(1.03);}
+     }
+    .rotate {  
+     
+      animation: walk 1s steps(4) infinite,move 0.5s linear infinite;
+
+    }
+  
+     
+    
+    @keyframes move {
+      0%,100%{ transform: translateX(0);}
+      50% {transform: translatey(20px);}
+    }
+    button {
+      background-color: blue;
+      border-radius: 2px;
+      border: none;
+      padding: 8px;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+    }
+     table,th,td {
+                
+                border: 1px solid rgba(0, 0, 0, 0.856);
+              
+                 width: auto;
+                text-align: left;
+                 object-position: center;
+                 justify-content: center;
+              
+                };
+            th,td, tr{
+                padding: 16px;
+            
+                
+            }  
+            th {
+              color: blue;
+              font-weight: normal;
+              text-align: center;
+              
+            }
+          
+           /*foote-----------2r*/
+           @keyframes shine {
+         0%,100%{transform: scale(1);}
+        50%{transform: scale(1.015);}
+        }
+   .cta {
+    animation: shine 1s ease infinite;
+   }
+    .card2{
+       
+        background-color: #06283d;
+        padding:16px;
+        box-shadow:0 6px 18px rgba(10,10,10,0.06);
+        color: rgba(0, 0, 0, 0.034);
+        text-align: center;
+        padding-bottom: 5%;
+        font-weight: normal;
+        font-size: small;
+
+        
+
+    }
+     .menubar {
+        display: none;
+        flex-direction: column;
+        color: white;
+        padding: 10px;
+      
+        
+       
+      }
+      .menubtn{
+        background-color: #06283d;
+        text-decoration: none;
+        display: flex;
+       
+      
+      }
+      #search {
+      width: 300px;
+      padding: 12px;
+      border: 1px solid #aaa;
+      border-radius: 8px;
+      font-size: 16px;
+      margin: 10px 20px;
+      display: block;}
+      .card p { text-align: left;
+        line-height: 1.6;
+        
+        
+      }
+     
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Kelvin BioGeo Learning</div>
+        <div class="small">Form 1–6 | Geography & Biology</div>
+        <div class="lang-toggle">
+          <button class="btn" onclick="setLang('en')">English</button>
+          <button class="btn" onclick="setLang('sw')">Kiswahili</button>
+        </div>
+      </nav>
+    </div>
+        <button id="menubtn" class="menubtn">≡≡</button>
+       <div id="menubar" class="menubar">
+        <li class="resource"><span lang-content="en" class="active">
+           <a href="" style="color: white;border-bottom:2px solid#06283d; ">Home page</a></span>
+         <li class="resource"><span lang-content="en" class="active"><a href="#about-us" style="color: white;
+          border-bottom:2px solid#06283d; ">
+          About Kelvin BioGeo Learning
+         </a></spa>
+          <li class="resource"><span lang-content="en" class="active"><a href="#contact" style="color: white;
+           border-bottom:2px solid#06283d; ">
+           Contact us
+          </a></spa>
+          <li class="resource"><span lang-content="en" class="active"><a href="#Videos" style="color: white;
+           border-bottom:2px solid#06283d; ">
+           video Lessons
+          </a></spa>
+          <li class="resource"><span lang-content="en" class="active"><a href="#contact" style="color: white;
+           border-bottom:2px solid#06283d; ">
+           Our Aims
+          </a></spa>
+              <li class="resource"><span lang-content="en" class="active"><a href="#Teachers-zone" style="color: white; 
+               border-bottom:2px solid#06283d;">
+                Scheme of Works & Lesson Plan
+              </a></spa>
+        <li class="resource"><span lang-content="sw"> <a href="#" style="color: white;  border-bottom:2px solid#06283d;">
+            Nyumbani
+        </a></span>
+          <li class="resource"><span lang-content="sw"> <a href="About-us" style="color: white; border-bottom:2px solid#06283d;
+          border-bottom:2px solid#06283d;">
+            Kuhusu Kelvin BioGeo Learning
+          </a></span>
+            <li class="resource"><span lang-content="sw"> <a href="" style="color: white; border-bottom:2px solid#06283d; ">
+            Huduma nyingine
+            </a></span>
+            <li class="resource"><span lang-content="sw"> <a href="#contacts" style="color: white; border-bottom:2px solid#06283d; ">
+            Mawasiliano
+            </a></span>
+  </header> 
+  <br>
+  <body id="page">
+      <input type="text" id="search" placeholder="KelvinBio-GeoSearch...">
+  
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <div lang-content="en" class="active">
+          <h1>Learn Geography & Biology — Clear, Simple, Practical</h1>
+          <p class="lead">Free notes, past papers, and short video lessons to help secondary students succeed. Created by Kelvin — teacher-in-training (BSc Ed: Geography & Biology).</p>
+          <p style="margin-top:12px"><a class="cta" href="#notes">Start Learning</a></p>
+        </div>
+        <div lang-content="sw">
+          <h1>Jifunze Jiografia & Baiiolojia — Rahisi, Wazi, na Kivitendo</h1>
+          <p class="lead">Notes za bure, maswali ya zamani, na video fupi za kujifunzia kwa wanafunzi wa sekondari. Imetengenezwa na Kelvin — mwanafunzi wa elimu (BSc Ed).</p>
+          <p style="margin-top:12px"><a class="cta" href="#notes">Anza Sasa</a></p>
+        </div><div style="margin-top:14px" class="small">Tip: Use the language buttons at top to switch between English and Kiswahili.</div>
+  </div>
+
+  <aside>
+    <aside>
+    <div class="card">
+      <h3 lang-content="en" class="active">Hi.!! Emmy I am enjoying to learn geography</h3>
+      <h3 lang-content="sw">matangazo ya Haraka</h3>
+      <div class="rotate">
+      
+      <figure>
+        <a href="bioGeomechanism.html"><img src="cartoon-world-globe-pointing-with-his-finger_1303870-1396 (1).jpg"
+           style="display: block; width: 200px;"></a>
+            </figure>
+      </div>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section id="about-us" style="margin-top:18px">
+  <div class="card">
+    <h2 lang-content="en" class="active">Notes</h2>
+    <h2 lang-content="sw">Notes</h2>
+    <p class="small" lang-content="en" class="active">Download clear, exam-focused notes by topic.</p>
+    <p class="small" lang-content="sw">Pakua notes za mtihani, kwa mada.</p>
+
+    <div class="grid" style="margin-top:12px">
+      <div class="card">
+       <div lang-content="en" class="active">
+          <h1>Learn Geography & Biology — Clear, Simple, Practical</h1>
+          <p class="lead">Free notes, past papers,
+            which include
+            <ul>
+                <li>Pre-mock examination papers form 1-4|</li>
+                <li>Mock examination papers form 1-4|</li>
+                 <li>Pre-necta past papers 1-4|</li>
+                  <li>Necta past papers 1-4|</li>
+                   
+            </ul> 
+            Also short video lessons to help secondary students succeed. Created by Kelvin — teacher-in-training (BSc Ed: Geography & Biology).</p>
+          <p style="margin-top:12px"><a class="notes" href="#Bio-notes">Start Learning</a></p>
+        </div>
+         
+        <div lang-content="sw">
+          <h1>Jifunze Jiografia & Baiolojia — Rahisi, Wazi, na Kivitendo</h1>
+          <p class="lead">Notes za bure, maswali ya zamani,
+            Pamoja na <ul>
+                 <li>Pre-mock examination papers form 1-4|</li>
+                <li>Mock examination papers form 1-4|</li>
+                 <li>Pre-necta past papers 1-4|</li>
+                  <li>Necta past papers 1-4|</li>
+            </ul>
+            napia video fupi za kujifunzia kwa wanafunzi wa sekondari. Imetengenezwa na Kelvin — mwanafunzi wa elimu (BSc Ed).</p>
+          <p style="margin-top:12px"><a class="cta" href="buttobs.html">Anza Sasa</a></p>
+        </div><div style="margin-top:14px" class="small">Tip: Use the language buttons at top to switch between English and Kiswahili.</div>
+  </div>
+    <aside>
+    <div class="card">
+      <h3 lang-content="en" class="active">Quick ads Mechanism</h3>
+      <h3 lang-content="sw">matangazo ya Haraka</h3>
+      <div class="pump">
+      <div id="slider">
+            <figure>
+                  <a href="bioGeomechanism.html"><img src="heart.PNG" style="display: block; width: 250px;"></a>
+            </figure>
+      </div>
+      </ul>
+    </div>
+    <li><b>Learner's</b> enjoying Learning Biology The flow of blood in the heart and Other body
+      Mechanism with clear Animation
+    <b>click image to view</b></li>
+    </div>  
+  </aside>
+</section>
+<section id="about-us">
+ 
+   <div lang-content="en" class="active">
+    <div class="card">
+       <h3>About us</h3>
+      <img src="piaget.jpg" style="border-radius: 100%;height: 50px;width: 50px;object-fit: cover;">
+    <p><b>KelvinBio-Geo Learning</b> is an innovative digital education platform dedicated to making the     study of Biology and Geography simple, engaging, and accessible to all learners.</p><p>
+       We combine modern teaching techniques with well-structured content to help students
+        understand even the most challenging concepts with ease.
+Founded with the belief that quality education should be available to every student
+ regardless of background, Bio-Geo Learning provides clear explanations, 
+ visual learning tools, interactive exercises, and well-organized study materials
+  aligned with the Tanzanian curriculum for both O-Level, A-Level, and college learners.</p>
+We understand that many students struggle with topics such as ecological relationships,
+ genetics, environmental management, map reading, and physical geography. For this reason, we break down every topic into understandable pieces supported by examples, diagrams, videos, and student-friendly notes.
+</p>
+
+<h4>Why Choose KelvinBio-Geo Learning?
+</h4>
+<p>Because we are committed to transforming how students learn science by making it easier, more enjoyable, and more effective. Whether you are preparing for exams or strengthening your fundamentals, Bio-Geo Learning is your ultimate companion.
+</p>
+    </div>
+
+  
+   
+  </div>
+      <div class="card" style="margin-top: 18px;">
+        <h4>What We Offer</h4>
+       <ul>
+      <li>Detailed notes for Biology and Geography.</li>
+      <li>Simplified explanations for complex topics.</li>
+     <li>Past papers and model examinations.</li>
+     <li>Video tutorials and animated learning content.</li>
+      <li>A clean, friendly, and distraction-free learning environment.</li>
+       <li>Self-assessment questions with answers.
+     </li>
+    <li>Regular updates to ensure accuracy and relevance.
+    </li>
+     <li>Teaching resources for .</li>
+    </ul>
+</div>
+
+<div class="card" style="margin-top: 18px;">
+  <h4>Our Mission
+</h4>
+To provide affordable, high-quality, and easy-to-understand Bio-Geo educational content that empowers every learner to improve academically and build confidence in scientific subjects.
+
+<h4>Our Vision</h4>
+    To become the most trusted and impactful digital platform in Tanzania for learning Biology and Geography through innovative, accessible, and student-centered resources.
+</div>   
+    <div class="card" style="margin-top: 18px;">
+       <h4>Our Core Values</h4>
+
+
+     <ul>
+    <li><b>Excellence:</b> Delivering accurate and reliable educational content.</li>
+     <li><b>Accessibility:</b> Making learning resources available to all students.
+     </li>
+        <li><b>Innovation:</b> Using modern tools and creative teaching methods.
+      </li>
+      <li><b>Integrity: </b>Ensuring honesty, transparency, and professionalism.
+      </li>
+        <li><b>Student Success:</b> Helping learners reach their highest academic potential.</li>
+   </ul>
+      </div>
+
+    </div>
+   
+</div>
+
+   <div lang-content="sw">
+  <div class="card">
+    <div class="imglogo">
+   <img src="" style="border-radius: 100%; width: 150px;">
+         </div><h3> Kuhusu Sisi (Kiswahili – Toleo Ndefu)
+        </h3>
+       <p><b>KelvinBio-Geo Learning</b> ni jukwaa la kidigitali lililoundwa kwa lengo
+      la kurahisisha ujifunzaji wa Biology na Geography kwa njia inayoeleweka,
+     ya kuvutia, na rahisi kuwafikia wanafunzi wote.</p>
+    <p>Tunatumia mbinu za kisasa 
+    za ufundishaji pamoja na maudhui yaliyopangwa vizuri ili kumsaidia mwanafunzi
+     kuelewa mada ngumu bila ugumu. 
+     Tunaamini kuwa elimu bora inapaswa kupatikana kwa
+      kila mwanafunzi bila kujali mazingira, hivyo Bio-Geo 
+      Learning inatoa maelezo ya kina, vielelezo, video, michoro, 
+      na maswali ya kujipima yaliyolingana na mitaala ya Tanzania kwa
+       wanafunzi wa kidato cha chini, kidato cha juu na vyuo.</p>
+      <p>Tunajua kuwa wanafunzi wengi hukutana na changamoto kwenye mada kama mahusiano ya viumbe, genetics, 
+         usimamizi wa mazingira, kusoma ramani, na jiografia ya miundo. Ndiyo maana tunagawanya kila
+        mada katika vipande rahisi kueleweka vikiwa na mifano, michoro, video na notes rafiki kwa mwanafunzi.
+       </p>
+         <h4>Kwa Nini Uichague kelvinBio-Geo Learning?</h4>
+        <p>Kwa sababu tumejitoa kubadilisha namna wanafunzi wanavyojifunza sayansi 
+         — kuifanya iwe rahisi, ya kuvutia na yenye matokeo halisi. Ukiwa unajiandaa 
+           kwa mitihani au unataka tu kuelewa zaidi, Bio-Geo Learning ndilo jukwaa lako sahihi.
+           </p>
+          <h3>Tunachotoa</h3>
+          <ul>
+         <li>Notes za kina za Biology na Geography</li>
+         <li>Ufafanuzi rahisi wa mada ngumu</li>
+           <li>Video tutorials na maudhui ya michoro</li>
+           <li>Maswali ya kujipima yenye majibu</li>
+             <li>Mitihani ya nyuma (past papers) na model tests</li>
+            <li>Vifaa vya kufundishia kwa walimu</li>
+            <li>Maboresho ya mara kwa mara kulingana na mtaala</li>
+            <li>Lingine lenye mwonekano safi na rafiki kwa mwanafunzi
+           </li>
+         </ul>
+    </div>
+<br>
+      <div class="card">
+        <h4>Dhamira Yetu (Mission)</h4> 
+
+<p>Kutoa elimu bora, nafuu, na inayoeleweka kwa urahisi kwa kila mwanafunzi
+   anayejifunza Bio-Geo, huku tukiwapa uwezo wa kufaulu na kuongeza kujiamini 
+   katika masomo ya sayansi.
+</p>
+<h4>Dira Yetu (Vision)</h4>
+<p>Kuwa jukwaa linaloaminika zaidi Tanzania katika ujifunzaji wa Biology na
+ Geography kwa kutumia ubunifu, teknolojia na mbinu za kisasa.
+</p>
+<h4>Misingi Yetu (Core Values)</h4>
+<ul>
+  <li><b>Ubora:</b>Tunatoa maudhui sahihi na yanayoaminika.</li>
+  <li><b>Uwepesi wa Kupatikana:</b>Kila mwanafunzi anaweza kufikia maudhui yetu.
+</li>
+  <li><b>Ubunifu:</b>Matumizi ya mbinu na teknolojia mpya.</li>
+  <li><b>Uadilifu:</b> Uwazi, ukweli na weledi.
+  </li>
+  <li><b>Ufanisi wa Mwanafunzi:</b>Tunaweka mafanikio ya mwanafunzi mbele kila wakati.</li>
+</ul> 
+  </div>
+  </div>
+</div>
+</section>
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="Video" style="margin-top:18px">
+    <div class="grid" style="margin-top:12px">
+      <div class="card" class="shine">
+             <h4>Video Lessons</h4>
+            <h4><li><centre>Shorts Focused tutorials (5-12min).New upload Weakly in Biology.</centre> </li></h4>
+         <img src="dna2.jpg" style="width: 250px;object-position: center;height: 200px;">
+        <h4 lang-content="en" class="active">Learn Biology Video Lessons with Simple Mechanism</h4>
+        <h4 lang-content="sw">Vido fupi za dakika (5-10). Biology</h4>
+        <p  class="small">Click button to view full with <b>Animation.</b></p>
+       <p style="margin-top:12px"><a class="cta" href="">Start Learning</a></p>
+      </div>
+
+      <div class="card">
+          <h4><li>Shorts Focused tutorials (5-12min).New upload Weakly in Geography.</li></h4>
+          <img src="earth.gif" style="width: 250px;object-position: center;;">
+        <h4 lang-content="en" class="active">Learn Geography Simple Explanation</h4>
+        <h4 lang-content="sw">Vido fupi za dakika (5-10). geography</h4>
+        <p class="small">Click button to view Videos Full with <b>Animation.</b> </p>
+         <p style="margin-top:12px"><a class="cta" href="#">Start Learning</a></p>
+      </div>
+      </div>
+  </div>
+</section>
+
+<section id="notes" style="margin-top:18px">
+  <div class="card">
+    <h3 lang-content="en" class="active"><u style="color: blue;">Notes zone</u> : Dawnloads Biology&Geograhy </h3>
+    <h3 lang-content="sw">Sehemu ya notes : Pakua Biology& geography</h3>
+    <p class="small" lang-content="en" class="active">Download Biology notes clear, exam-focused notes form One &Form Four.</p>
+    <p class="small" lang-content="sw">Pakua notes za biology hapa</p>
+    <div class="grid" style="margin-top:12px">
+      <div class="card">
+        <h4 lang-content="en" class="active">Dawnload Biology Notes Form One-Form Four</h4>
+        <h4 lang-content="sw">Pakua Notes Za abiology Kidato Cha kwanza  — Nne(<b>TIE</b>)</h4>
+        <p>Danwload Biology Notes From <b>(TIE) And other sources</b></p>
+        <p class="small">Notes + diagrams (PDF) </p>
+       <p style="margin-top:12px"><a class="cta" href="">Start Learning</a></p>
+      </div>
+      <div class="card">
+        <h4 lang-content="en" class="active">Dawnload Biology Notes Form OneForm — Four</h4>
+        <p>Danwload Geography Notes From <b>(TIE) And Other sources</b></p>
+        <h4 lang-content="sw">Geography — Kidato cha Tatu &Nne Notes kutoka (<b>TIE</b>)</h4>
+           <p class="small">Notes + diagrams (PDF) </p>
+       <p style="margin-top:12px"><a class="cta" href="">Start Learning</a></p>
+      </div>
+     
+      
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+ </section>
+<section id="papers" style="margin-top:18px">
+  <div class="card">
+    <h3 lang-content="en" class="active">Past Papers</h3>
+    <h3 lang-content="sw">Maswali ya Zamani</h3>
+    <p class="small">Organized by year and subject.</p>
+    <ul style="margin-top:10px">
+      <li>NECTA Biology — 2022 <a href="#" class="small">Click to view</a></li>
+      <li>NECTA Geography — 2023 <a href="#" class="small">Click to view</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="Teachers-zone" style="margin-top:18px">
+    <div class="card">
+     <h3 lang-content="en" class="active">Teachers zone danload scheme of works and lesson plan.</h3>
+     <h4 lang-content="sw">Material ya walimu pakua maandalio ya masomo pamoj na azimio la kazi.</h4>
+     <p class="small" lang-content="en" class="active">Download clear, lesson plan and schem notes by topic.</p>
+     <p class="small" lang-content="sw">Pakua notes za mtihani, kwa mada.</p>
+ 
+    <p>Biology subject</p>
+     <table style="background-color: beige;">
+          <th>Subject</th>
+          <th>Level</th>
+          <tr>
+            <td>Biology all level 2025 Scheme of work</td>
+              <td><a href=""> Open</a></td>
+          </tr>
+           <tr>
+            <td >Geography all level 2025 Scheme of Work</td>
+              <td><a href=""> Open</a></td>
+          </tr>
+           <tr>
+            <td>Biology F3 lesson plan 2025</td>
+              <td><a href=""> Open</a></td>
+          </tr>
+         
+        </table>
+   </div>
+   </div>
+</section>
+
+<section id="contacts" style="margin-top:18px">
+  <div class="card">
+    <h4 lang-content="en" class="active">Aim Of Creating Web</h4>
+    <h4 lang-content="sw">lengo kuu la kutengeneza website</h4>
+    <ul>
+<p style="text-align: center;font-weight: bold;">Developer Portfolio Website</p>
+       <li>To showcase my work, the projects I have built, and my skills as a developer in order
+         to attract clients or secure job opportunities.</li>
+    </ul>
+    <ul>
+<p style="text-align: center;font-weight: bold;">School / Educational Website
+</p>
+       <li>To provide essential information about courses, results, academic calendars, and offer students and teachers the resources they need for effective learning.”
+</li>
+    </ul>
+    <ul>
+<p style="text-align: center;font-weight: bold;">  Blog / Knowledge Sharing Website
+</p>
+       <li>To share knowledge, education, and various information with readers in a simple and engaging way, while building a community of people interested in the topics I write about.”</li>
+    </ul>
+
+
+
+    
+  </div>
+</section>
+<footer>
+  <div class="container small">© Kelvin BioGeo Learning — Create This Web ❤️ But it is not<b>Finished For attachment Link.</b>  
+
+</footer>
+<section id="contact" style="margin-top:18px">
+  <div class="card">
+    <h4 lang-content="en" class="active">Contact</h4>
+    <h4 lang-content="sw">Wasiliana</h4>
+    <p class="small">Email: <a href="mailto:kelvinkasubiti@gmail.com">kelvinkasubiri@gmail.com</a></p>
+    <p class="small">WhatsApp: +255 787457993</p>
+  </div>
+</section>
+
+
+</main>
+ <section id="contact" style="margin-top: 18px;">
+    <div class="card2">
+      <h4 style="color: white;">Other Educational Stakeholders </h4>
+      <a href="" style="text-decoration: none; color: white;font-weight: normal;
+      " >National Examination council of Tanzania<b>(NECTA)</b> </a></p>
+       <a href="" style="text-decoration: none; color: white;">Tanzania Institute of Education<b>(TIE)</b> </a></p>
+        <a href="" style="text-decoration: none; color: white;">Maktaba tetea </a></p>
+        <a href="" style="text-decoration: none; color: white;">Msomi bora </a>
+        <a href="" style="text-decoration: none; color: white;">NECTA</a>
+      <p lang-content="en"class="active" style="color: white;">Please contact us if there is technical problem</p>
+      <p lang-content="sw">wasiliana nasi kama kuna tatizo la kiufundi</p> |
+      <a href="tel:+255658201778" style="color: white;"> <centre>+255658201778 sr..</centre></a> | <br>
+      <a href="tel:+255748279965" style="color: white;">+255748279965 sr...Advartisement</a> | <br>
+      <a href="tel:+255787457993" style="color: white;"> web.💬Developer +255787457993...creator</a> | <br>
+      
+      <footer>
+          <p>&copy; <span id="currentYear"></span>All right reserved</p>
+             <p><centre>designed by calvin kasubili .Web developer 
+             </centre></p>   
+      </footer>
+      
+    </div>
+  </section>
+   <script>
+    function setLang(code){
+      // hide all
+      document.querySelectorAll('[lang-content]').forEach(el=>el.classList.remove('active'));
+      // show chosen
+      document.querySelectorAll('[lang-content="'+code+'"], [lang-content="'+code+'"].active').forEach(el=>el.classList.add('active'));
+      // convenience: set english active default for nav labels
+      if(code==='en'){
+        document.documentElement.lang='en'
+      } else { document.documentElement.lang='sw' }
+    }
+    // default english
+    setLang('en');
+    
+  </script>
+  <script>
+              document.getElementById("year").textContent = new Date().getFullYear();
+                 function setLang(code){
+      // hide all
+      document.querySelectorAll('[lang-content]').forEach(el=>el.classList.
+      remove('active'));
+      // show chosen
+      document.querySelectorAll('[lang-content="'+code+'"], [lang-content="'+code+'"].active').forEach(el=>el.classList.add('active'));
+      // convenience: set english active default for nav labels
+      if(code==='en'){
+        document.documentElement.lang='en'
+      } else { document.documentElement.lang='sw' }
+    }
+    // default english
+    setLang('en');
+      //for menubar//
+  
+   </script>
+   <script>
+       const btn =
+        document.getElementById("menubtn");
+        const menu = document.getElementById("menubar");
+        btn.addEventListener("click",  () => {
+          if (menu.style.display === "flex")
+          {menu.style.display = "none";
+
+          }
+          else {menu.style.display = "flex";}
+
+          
+        } );
+        document.getElementById("currentyear").textContent = new Date().getFullYear()
+      
+    </script>
+    <script>
+  
+document.getElementById("search").addEventListener("keyup", function () {
+    let filter = this.value.toLowerCase();
+
+    let all = document.querySelectorAll("#page *:not(#search):not(script)");
+
+    all.forEach(function(el) {
+        let text = el.textContent.toLowerCase();
+
+        if (text.includes(filter)) {
+            el.style.display = "";
+        } else {
+            el.style.display = "none";
+        }
+    });
+});
+</script>
+      </body>
+</html>
