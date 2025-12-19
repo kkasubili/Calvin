@@ -1,0 +1,431 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr issaya Eternal International Taanzania.</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <style>
+     *{box-sizing:border-box;}
+     
+    body{font-family:Inter,ui-sans-serif,system-ui,
+        -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+        line-height:1.5;margin:0;color:#111}
+        header {
+
+            background:linear-gradient(90deg,#06283d 0%, #0891b2e6
+       100%);color:#fff;padding:18px}
+        .menubtn {
+            background-color: rgb(209, 209, 228);
+            border:none;
+            cursor: pointer;
+            font-size: large;
+            padding: 8px;
+        }
+     
+
+        ul.resources{list-style:none;
+            padding:0;margin:0;display:flex;flex-direction:column;
+            gap:8px}
+
+     
+     a {
+        text-decoration: none;
+        color: black;
+     
+     }
+      .container
+    {max-width:980px;margin:0 auto;padding:20px}
+
+     nav {display:flex;gap:12px;align-items:center}
+    .brand{font-weight:700;font-size:20px;margin-left: 50px;}
+    .menubar{
+        
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 2.5s ease;
+        padding-left: 10px;
+        margin: 20px;
+        color: black;
+        padding-left: 10px;
+        border-radius: 5px;
+        gap: 10px;
+       
+       
+    }
+    .menubar.show {
+        max-height: 500px;
+    }
+    .titl { font-weight: bold;
+        text-align: center;
+
+    }
+    
+    .card{
+        max-width: auto;
+        background-color: #fff;
+        box-shadow:0 6px 18px rgba(10,10,10,0.06);
+        padding: 10px ;
+        margin: 20px;
+        border-radius:12px;
+        padding:20px;
+        object-position: center;
+        text-overflow: hidden;
+    }
+     .container {padding:28px 0}
+     h3 { text-align: center;
+        color:gray;
+
+     }
+     .grid { 
+      
+      display: flex; 
+      grid-template-columns:repeat(auto-fit,
+      minmax(260px,1fr));
+      gap:14px;margin-top:18px;
+     }
+     .imge{
+        align-items: center;
+        object-position: center;
+     }
+     
+       /*batani ya ujumabe*/
+            .peleka{
+              background-color: red;
+              box-shadow: 0 6px maroon;
+              border: none;
+              padding: 8px;
+              color: white;
+              border-radius: 999px;
+              cursor: pointer;
+            }
+            footer {
+              background-color: #333;
+              color: white;
+              padding: 10px;
+              align-items: center;
+            
+              padding: 10px;
+
+            }
+            .end{
+                text-align: center;
+                align-items: center;
+
+            }
+              .social-icons a{font-size:22px;margin:0 10px;color:#fff;transition:0.3s;align-items: center;justify-content: center;}
+               .social-icons a:hover{transform:scale(1.3);color:var(--accent)}
+                  @keyframes slider {
+                0% { left: 0;
+                }
+                20% { left: 0;
+
+                }
+                25% { left: -100%;
+
+                }
+                45% {
+                    left: -100%;
+                }
+                50% {
+                    left: -200%;
+                }
+              
+            }
+              @keyframes shake {
+              0%, 100% { transform: translateY(0px);}
+               50% { transform: translateY(5px);}
+                100%{ transform: translateY(0px);}
+           
+   }   
+     #slider {
+                overflow: hidden;
+                height: 400px;
+                overflow: hidden;
+                height: 400px;
+            }
+            #slider figure {
+                position: relative;
+                width: 500%;
+                margin: 0;
+                left: 0;
+                animation: 20s slider infinite;
+            }
+            #slider figure img {
+                float: left;
+                width: 20%;
+                object-fit: cover;
+
+            }
+            .icon {
+              color: blue;
+              font-size: 50px;
+              align-items: center;
+              height: 100px;
+              width: 100px;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              padding: 10px;
+              margin-left: 100px;
+
+            }
+             .card:hover{transform:translateY(-4px)}
+    
+        .pump {
+        animation: pump ease-in-out 0.3s infinite;
+      }
+    
+     @keyframes pump {
+      0%,100%{transform: scale(1);}
+      30%{transform: scale(1.01);}
+      60%{transform: scale(1.02);}
+       90%{transform: scale(1.03);}
+     }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
+   </style>
+</head>
+<body>
+   <header>
+    <nav>
+         <button id="menubtn" class="menubtn">≡≡</button>
+          <div class="brand" style="color: grey;">Eternal international Tanzania </div>
+       </div>
+    </nav>
+   </header>
+    
+        <div id="menubar" class="menubar">
+                     <li class="resource"><a href="#about-us"> Mwanzo</a><hr>
+                           <li class="resource"><a href="#about-us"> Kuhisu sisi</a><hr>
+                               <li class="resource"><a href="#about-us"> Huduma zetu</a><hr>
+                                   <li class="resource"><a href="#about-us"> Afya ya jamii</a><hr>
+                                       <li class="resource"><a href="#about-us">matangazo</a><hr>
+        </div>
+        </div>
+        <div class="card">
+          <div class="titl">
+             <p>Huduma Bora za Magonjwa yasio ambukiza(NCDS)</p>
+              <img src="1.jpg" style="width: 350px;">
+          </div>
+               
+            </div>
+        
+        <main class="container">
+         
+          <div class="card">
+            <div class="pump">
+                <img src="heart.PNG">
+            </div>
+          
+          </div>
+         <div class="card">
+             <h3>Kuhusu sisi</h3>
+               <b><u> Eternal international Tanzania</u></b> ni Hospitali ya kisasa ikilenga kutoa huduma za magonjwa yasioambukimbizwa
+               kama vile.
+               <ul>
+                <li>Kisukari</li>
+                  <li>Saratani</li>
+                    <li>Shinikizo la damu</li>
+                      <li>Magonjwa ya moyo</li>
+                     <p style="font-weight: bold;">Pia na Magonjwa kama Vidonda vya tumbo,
+                      Mfumo wa uzazi,
+                      Saratani Presha Homa ya ini Mtatizo ya figoKupalalaiziBawasiliMatatizo ya macho matatizo ya akiliAleji
+                      Matatizo ya Ngozi Tezi dume uvimbe matatizo ya mifupa Ganziya tumbo,</p>
+               </ul>
+               Timu yetu yenye Madaktari bingwa waliobobea inahakikisha wagojwa wanapata Matibabu
+               
+               Bora zaidi pamoja na<b>Dawa</b> zenye Ubora wa hali ya juu, na pia tunatoa Elimu ya afya kwa jamii. Tunapatikana mikoa mbali mbali nchini Tanzania ikiwemo
+               Dar-es-salaam Arusha, Mwanza, Mbeya, Moshi, Dodoma na Zanzibar.
+                </div>
+             <div class="card" style="margin-top: 18px;">
+                    <h4>Tunajivunia</h4>
+                      <ul>
+                    <li>Timu ya madaktari bingwa walio bobea katika NCDs</li>
+                    <li>Upatikanaji wa dawa za hali ya juu</li>
+                    <li>Vifaa vya kisasa</li> pamoja na 
+                    <li>Huduma ya karibu na wagonjwa </li>
+                     </ul>
+                          <h4>Dira yetu</h4><p>
+                                      <b>Eternal international Tanzania</b> Dira yetu nikua hospitali Bora inayo aminika zaidi kwa matibabu ya magonjwa yasio ambukizwa ndani ya tanzania.
+
+                  </p>
+            </div>
+          <section id="huduma zetu" style="margin-top:18px"> 
+                    
+                  <h3>Huduma zetu</h3>
+                  <div class="card">
+                       <div class="icon">
+                      <i class="fa-solid fa-microscope"></i>
+                    </div>
+                   <h4 style="text-align: center;">Uchunguzi na Diagnosis</h4>
+                   <p>Screening ya kisukari,shinikizo la damu,moyo na saratani kwa kutumia Teknolojia ya kisasa.
+                    Na pia tunatoa ofa ya matibabu ya mwli mzima kwa <strong>Tsh: 30000 Tuh!</strong>
+                   </p>
+                  </div>
+                     <div class="card">
+                       <div class="icon">
+                      <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h4 style="text-align: center;">Matibabu na Dawa</h4>
+                   <p>Hospitali ya <b>Eternal international Tanzania</b> tunatoa matibabu ya kisukari,shinikizo la damu,moyo na 
+                    saratani kwa kutoa dawa zenye ubora wa hali ya juu ikiwemo dawa za asili zilizo idhinishwa.</p>
+                </div>
+                 <div class="card">
+                     <div class="icon">
+                      <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h4 style="text-align: center;">Ushauri wa Lishe na life style</h4>
+
+                   <p>Tunatoa Programu za kupunguza hatari za magonjwa yasiyo ambukizwa (NCDs).</p>
+
+                 </div>
+                  <div class="card">
+                    <h4 style="text-align: center;">Community Health Education</h4>
+                   <p><b>Eternal international Tanzania</b>Pia tunatoa semina mbalimbali na elimu kwa jamii kuhusu magonjwa yasio ambukizwa.
+                  na pia kukutana na Dactari Bingwa wa magonjwa sugu yasio ambukiza.</p>
+                 </div>
+                    <div class="card">
+                         <div class="icon">
+                      <i class="regular fa-person-harassing"></i>
+                    </div>
+                    <h4 style="text-align: center;">Huduma Nyingine</h4>
+                   <p><b>Eternal international Tanzania</b> Pia tunatoa fursa za kazi kwa vijana wa kitanzania ambao hawana ajira.</p>
+              </div>
+               <div class="card">
+                   <div class="icon">
+                      <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <h4 style="text-align: center;">Kazi ya dawa zetu ni.</h4>
+                  <p>
+                    <ul>
+                      <li>Kutoa mafuta mwilini.</li>
+                      <li>Ku balance Suksri Mwilini.</li>
+                      <li>Dawa hutolewa baada ya vipimo kutoka kwa daktari.</li>
+                      <li>Kutibu kuanzia <b>Chanzo cha tatizo</b> Tatizo lenyewe na kinacho kunyemelea kukupata baadae</li>
+                    </ul>
+                  </p>
+              </div>
+          </section>
+          <section id="matangazo">
+              <h3>Maoni ya watu waliopata huduma</h3>
+               <div class="slider">
+                       <div class="card">
+                  <img src="piaget.jpg" style="width: 100px; border-radius: 100%;">
+                  <P>Hospitali ya <b>Eternal international Tanzania</b> wanatoa Huduma bora na nzuri sana nimefurahi
+                    sana kwa kupatiwa huduma bora na matibabu yenye uhakika zaidi
+                  </P>
+
+                  <strong>Amina s Bashe</strong><br>
+                  <centre style="color: gray"> 2 hours Ago</centre>
+                 </div>
+                   <div class="slider">
+                       <div class="card">
+                  <img src="piaget.jpg" style="width:100px; border-radius: 100%;">
+                  <p>Nimepata huduma bora kupitia Eternal international Tanzania</b> na matibabu yenye uhakika zaida zaidi
+                ikiwemo matibabu na dawa tiba za kupunguza athari za magonjwa ya kuambukizwa.</p>
+                  </P> 
+
+                  <strong>Yusuph mabula Ndaturu </strong><br>
+                  <centre style="color: gray"> 2 weeks Ago</centre>
+                 </div>
+               </div>
+               </div>
+             <section id="maoni" style="margin-top: 18px;">
+                <h3>Maoni na maulizo</h3>
+                  <div class="card">
+                          <form>
+                   <div id="input" patern class="form">
+                    <p style="text-align: center;">Please Enter your Description</p>
+                    <label for="name"><p>Enter your name</p></label>
+                    <input type="text" placeholder="Enter name..." required style="width: 100%; margin: 10px 0; padding: 10px;border-radius: 5px;
+                    border: 1px solid #ccc;">
+                
+                     <div id="input">
+                    <label for="name"><p>Enter your description</p></label>
+                    <textarea  placeholder="Enter your desc...." required style="padding: 20px 30px; margin: 10px 0;width: 100%;height:
+                    100px;border-radius: 5px;border: 1px solid #ccc;white-space:pr-ewrap;"></textarea>
+                    
+                  <button onclick="tuma()"type="tuma" class="peleka">Submit</button>
+                    
+                  <p id="feedback"></p>
+                          </form>
+                        </div>
+             </section>
+                        <br>
+                        <div class="card">
+                          <h4><li>Our teamworks.</h4>
+                           <img src="benchwork@1552253188.jpg" >
+                      
+                        </div>
+                        <div class="card">
+                            <h4><li>Bidha zetu zenye ubora.</h4>
+                        </div>
+                              <div class="card">
+                                <img src="1.jpg" >
+                              </div>
+                               <div class="card">
+                                <img src="2.jpg" >
+                              </div>
+                                 <div class="card">
+                                <img src="4.jpg">
+                              </div>
+                                <div class="card">
+                                <img src="5.jpg" >
+                              </div>
+                        </div>
+                        <div class="card">
+                          <h4><li>Siku za kazi</h4>
+                            <p>Jumatatu hadi ijumaa kuanzia Saa mbili asubuhi hadi saa kumi na moja jioni</p>
+                            <div class="card">
+                              <h5 style="font-weight: bold;"><li>Wasiliana nasi kupitia namba.</h5>
+                                <a href="tell:+255787457993">+255-627-249-2355</a>
+                            </div>
+                        </div>
+
+                      
+          </section>
+
+
+        </main>
+         <footer>
+          <div class="content">
+  
+          </div> 
+           <p style="color: gold;">Follow us</p> 
+       
+              <div class="social-icons" style="margin:10px 0">
+    <a href="https://fa.me/calvin kasubili"><i class="fab fa-facebook"></i></a>
+    <a href="https://wa.me/255787457993"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+    <a href="mailto:kelvinkasubiri@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://t.me/"><i class="fab fa-telegram"></i></a>
+    <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+              </div>
+    <div class="end">
+        <p style="text-align: center;">&copy; <span id="currentYear"></span>All right reserved</p>
+             <p style="text-align: center;"><centre>Designed by calvin kasubili .Web developer  
+    </div> 
+      </footer>
+         <script>
+       const btn =
+        document.getElementById("menubtn");
+        const menu = document.getElementById("menubar");
+        btn.addEventListener("click", () => { menu.classList.toggle("show");
+          document.getElementById("feedback").innerHTML = "!!! ....Ujumbe wako umetumwa";
+       setTimeout(() => { document.getElementById("feedback").innerHTML= "";}, 4000);
+       
+         
+          
+        });
+       
+      
+    </script>
+</body>
+</html>
